@@ -5,10 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.output.Slf4jLogConsumer;
-import org.testcontainers.containers.traits.LinkableContainer;
 
 @Slf4j
-public class ArangoDBContainer<SELF extends ArangoDBContainer<SELF>> extends GenericContainer<SELF> implements LinkableContainer {
+public class ArangoDBContainer<SELF extends ArangoDBContainer<SELF>> extends GenericContainer<SELF>  {
 
 	private static final Object DRIVER_LOAD_MUTEX = new Object();
 	private ArangoDB arangoDB;
