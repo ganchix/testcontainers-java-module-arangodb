@@ -26,5 +26,15 @@ public class ArangoDBContainerTest {
 		arangoDBContainer = arangoDBContainer.withoutAuthentication();
 	}
 
+	@Test(expected = Exception.class)
+	public void simpleTestErrorTryRunWithoutAuthenticationAndSetPassword() {
+		arangoDBContainer.stop();
+		arangoDBContainer = arangoDBContainer.withoutAuthentication();
+		arangoDBContainer.withPassword("Pass");
+		arangoDBContainer.start();
+		arangoDBContainer = arangoDBContainer.withoutAuthentication();
+	}
+
+
 
 }
