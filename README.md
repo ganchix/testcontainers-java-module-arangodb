@@ -19,7 +19,7 @@ See [testcontainers.org](https://www.testcontainers.org) for more information ab
 
 ```
 <dependency>
-    <groupId>org.testcontainers</groupId>
+    <groupId>io.github.ganchix</groupId>
     <artifactId>testcontainers-java-module-arangodb</artifactId>
     <version>0.0.1</version>
 </dependency>
@@ -28,7 +28,7 @@ See [testcontainers.org](https://www.testcontainers.org) for more information ab
 ### Gradle
 
 ```
-compile group: 'org.testcontainers', name: 'testcontainers-java-module-arangodb', version: '0.0.1'
+compile group: 'io.github.ganchix', name: 'testcontainers-java-module-arangodb', version: '0.0.1'
 ```
 
 #### Code example
