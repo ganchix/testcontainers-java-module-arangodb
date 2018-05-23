@@ -4,9 +4,7 @@ import com.arangodb.ArangoDB;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static io.github.ganchix.arangodb.ArangoDBConstants.DATABASE;
-import static io.github.ganchix.arangodb.ArangoDBConstants.HOST;
-import static io.github.ganchix.arangodb.ArangoDBConstants.USER;
+import static io.github.ganchix.arangodb.ArangoDBConstants.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -66,9 +64,14 @@ public class ArangoDBContainerTest {
 		assertEquals(arangoDBContainer.getHost(), HOST);
 		assertNull(arangoDBContainer.getPassword());
 		assertEquals(arangoDBContainer.getUser(), USER);
+		assertEquals(arangoDBContainer.getPort(), PORT);
 
 
 	}
 
-
+	@Test(expected = Exception.class)
+	public void testGetClientFail(){
+		arangoDBContainer.stop();
+		arangoDBContainer.getArangoDB();
+	}
 }

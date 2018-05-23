@@ -87,6 +87,7 @@ public class ArangoDBContainer<SELF extends ArangoDBContainer<SELF>> extends Gen
 							.user(USER)
 							.password(StringUtils.isNotBlank(password) ? password : null)
 							.build();
+					log.info("Get ArangoDB with version {} ", arangoDB.getVersion().getVersion());
 				} catch (Exception e) {
 					throw new RuntimeException("Could not get ArangoDB", e);
 				}
